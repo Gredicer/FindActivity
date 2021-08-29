@@ -1,0 +1,48 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '1.1.4'
+    id 'org.jetbrains.kotlin.jvm' version '1.5.30'
+}
+
+group 'com.gredicer'
+version '1.2.1'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+intellij {
+    version = '203.7717.56'
+    type = 'IC'
+    plugins = ['android', 'java']
+}
+
+patchPluginXml {
+    changeNotes = """
+      <em>1.2<em><br>
+      Compact code<br><br>
+      <em>1.1<em><br>
+      Fix some bugs<br><br>
+      <em>1.0<em><br>
+      Complete basic functions<br><br>
+    """
+}
+runIde {
+    ideDir = file('/Applications/Android Studio.app/Contents')
+}
+
+test {
+    useJUnitPlatform()
+}
+
+tasks.buildSearchableOptions {
+    enabled = false
+}
