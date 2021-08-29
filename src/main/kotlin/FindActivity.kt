@@ -1,5 +1,6 @@
 import com.intellij.codeInsight.navigation.NavigationUtil
 import com.intellij.ide.util.TreeClassChooserFactory
+import com.intellij.notification.Notification
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.psi.search.GlobalSearchScope
@@ -38,18 +39,22 @@ class FindActivity : AnAction() {
         fragments.add(0, activity)
 
 
-        val scope: GlobalSearchScope = GlobalSearchScope.allScope(project)
-        val chooser = TreeClassChooserFactory.getInstance(project)
-            .createNoInnerClassesScopeChooser(
-                "Choose Class to Move",
-                scope,
-                {
-                    fragments.contains(it.name)
-                },
-                null
-            )
-        chooser.showDialog()
-        if (chooser.selected != null) NavigationUtil.activateFileWithPsiElement(chooser.selected)
+        try {
+            val scope: GlobalSearchScope = GlobalSearchScope.allScope(project)
+            val chooser = TreeClassChooserFactory.getInstance(project)
+                .createNoInnerClassesScopeChooser(
+                    "Choose Class to Move",
+                    scope,
+                    {
+                        fragments.contains(it.name)
+                    },
+                    null
+                )
+            chooser.showDialog()
+            if (chooser.selected != null) NavigationUtil.activateFileWithPsiElement(chooser.selected)
+        }catch (e : Exception){
+            e.printStackTrace()
+        }
     }
 
 

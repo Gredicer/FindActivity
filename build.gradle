@@ -5,8 +5,7 @@ plugins {
 }
 
 group 'com.gredicer'
-version '1.2.1'
-sourceCompatibility = 1.8
+version '1.2.3'
 
 repositories {
     mavenCentral()
@@ -27,7 +26,7 @@ intellij {
 
 patchPluginXml {
     changeNotes = """
-      <em>1.2<em><br>
+      <em>1.2.3<em><br>
       Compact code<br><br>
       <em>1.1<em><br>
       Fix some bugs<br><br>
@@ -36,8 +35,10 @@ patchPluginXml {
     """
 }
 runIde {
+    autoReloadPlugins = true
     ideDir = file('/Applications/Android Studio.app/Contents')
 }
+
 
 test {
     useJUnitPlatform()
