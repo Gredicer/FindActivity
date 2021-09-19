@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'com.gredicer'
-version '1.2.3'
+version '1.2.4'
 
 repositories {
     mavenCentral()
@@ -19,13 +19,14 @@ dependencies {
 }
 
 intellij {
-    version = '203.7717.56'
-    type = 'IC'
+    version = '2021.1'
     plugins = ['android', 'java']
 }
 
 patchPluginXml {
     changeNotes = """
+      <em>1.2.4<em><br>
+      Update adapted version<br><br>
       <em>1.2.3<em><br>
       Compact code<br><br>
       <em>1.1<em><br>
@@ -36,9 +37,12 @@ patchPluginXml {
 }
 runIde {
     autoReloadPlugins = true
-    ideDir = file('/Applications/Android Studio.app/Contents')
 }
 
+//publishPlugin {
+//    channels = 'Stable'
+//    token = 'perm:Z3JlZGljZXI=.OTItNDcyNA==.wOYNJdAwTBc0KzlEGeMaKw0aJ3jJDz'
+//}
 
 test {
     useJUnitPlatform()
