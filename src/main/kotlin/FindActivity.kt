@@ -13,14 +13,15 @@ class FindActivity : AnAction() {
 
         val project = e.project!!
 
-        val result = execCMD("/usr/local/bin/adb shell dumpsys activity activities | grep mResumedActivity")
+        val adbPwd = execCMD("which adb")
+        val result = execCMD("$adbPwd shell dumpsys activity activities | grep mResumedActivity")
         val activityPackage = result.split("/")[1].split(" ")[0]
         println(activityPackage)
         val splitResult = activityPackage.split(".")
         val activity = splitResult[splitResult.size - 1]
         println(activity)
 
-        val result2 = execCMD("/usr/local/bin/adb shell dumpsys activity $activityPackage")
+        val result2 = execCMD("$adbPwd shell dumpsys activity $activityPackage")
         var flag = 0
         val fragments: MutableList<String?> = ArrayList()
         val lines = result2.split("\n").reversed()
