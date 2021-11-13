@@ -4,9 +4,14 @@
     <vendor email="gredicer@qq.com" url="">Gredicer</vendor>
     <description><![CDATA[
     An AndroidStudio plugin that can quickly get the activity and fragment displayed in the current app and jump when adb is active.<br>
-    Usage：choose Menu -> Tools -> FindActivity to use or just use keyboard shortcut "Alt + 0"<br><br>
+    Usage：<br>
+    ① Connect the mobile phone and open the corresponding app of the project on the mobile phone<br>
+    ② choose Menu -> Tools -> FindActivity to use or just use keyboard shortcut "Alt + 0"<br>
     此插件可以通过快速获取到当前APP显示的Activity和其中的Fragment并进行跳转<br>
-    使用方式：点击菜单栏 -> 工具 -> FindActivity 或者通过快捷键 "Alt + 0"
+    使用方式：<br>
+    ① 连接手机并打开在手机上打开项目对应的app<br>
+    ② 点击菜单栏 -> 工具 -> FindActivity 或者通过快捷键 "Alt + 0"<br>
+    <br>
     ]]></description>
 
     <depends>com.intellij.modules.platform</depends>
@@ -21,4 +26,8 @@
             <keyboard-shortcut keymap="$default" first-keystroke="alt 0"/>
         </action>
     </actions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <notificationGroup displayType="BALLOON" id="Custom Notification Group"/>
+    </extensions>
 </idea-plugin>
