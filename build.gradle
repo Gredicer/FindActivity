@@ -26,13 +26,13 @@ intellij {
 patchPluginXml {
     changeNotes = """
       <em>1.3.0<em><br>
-      Auto find adb path<br><br>
+      Auto find adb path<br>
       <em>1.2.4<em><br>
-      Update adapted version<br><br>
+      Update adapted version<br>
       <em>1.2.3<em><br>
-      Compact code<br><br>
+      Compact code<br>
       <em>1.1<em><br>
-      Fix some bugs<br><br>
+      Fix some bugs<br>
       <em>1.0<em><br>
       Complete basic functions<br><br>
     """
