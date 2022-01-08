@@ -4,42 +4,44 @@ import com.intellij.notification.NotificationGroupManager
 import com.intellij.notification.NotificationType
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
+import com.intellij.openapi.project.Project
 import com.intellij.psi.search.GlobalSearchScope
+import org.jetbrains.android.sdk.AndroidSdkUtils
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
 
 class FindActivity : AnAction() {
+
+    /** The path of ADB*/
+    private var adbPath = ""
+
     override fun actionPerformed(e: AnActionEvent) {
 
         val project = e.project!!
 
-        // 这里目前是有问题的，如果要是进行适配的话，第一步需要确认adb的路径
-        // 在jvm里运行命令必须要带全部路径才可以
-//        val adbPwd = execCMD("which adb")
-        val result = execCMD("/opt/homebrew/bin/adb shell dumpsys activity activities | grep mResumedActivity")
+        // Must use absolute path if used jvm command line
+        adbPath = AndroidSdkUtils.getAdb(project)?.path.toString()
+
+        val result = execCMD("$adbPath shell dumpsys activity activities | grep mResumedActivity")
+        println(result)
+
+
         if (result.isBlank()) {
-            NotificationGroupManager.getInstance().getNotificationGroup("Custom Notification Group")
-                .createNotification("Please check your phone is properly connected!", NotificationType.ERROR)
-                .notify(project)
-            return
+            return showNotification(project, "Please check your phone is properly connected!")
         }
         if (result.contains(".launcher/")) {
-            NotificationGroupManager.getInstance().getNotificationGroup("Custom Notification Group")
-                .createNotification(
-                    "Please open the corresponding app of your project on your mobile phone!",
-                    NotificationType.ERROR
-                )
-                .notify(project)
-            return
+            return showNotification(project, "Please open the corresponding app of your project on your mobile phone!")
         }
+
         val activityPackage = result.split("/")[1].split(" ")[0]
         println(activityPackage)
         val splitResult = activityPackage.split(".")
         val activity = splitResult[splitResult.size - 1]
         println(activity)
 
-        val result2 = execCMD("/opt/homebrew/bin/adb shell dumpsys activity $activityPackage")
+
+        val result2 = execCMD("$adbPath shell dumpsys activity $activityPackage")
         var flag = 0
         val fragments: MutableList<String?> = ArrayList()
         val lines = result2.split("\n").reversed()
@@ -53,8 +55,6 @@ class FindActivity : AnAction() {
         fragments.reverse()
         fragments.remove("SupportRequestManagerFragment")
         println(fragments)
-
-
         fragments.add(0, activity)
 
 
@@ -77,7 +77,6 @@ class FindActivity : AnAction() {
 
     }
 
-
     /**
      * Execute command in terminal
      * @param command String
@@ -96,6 +95,18 @@ class FindActivity : AnAction() {
             return e.toString()
         }
         return sb.toString()
+    }
+
+
+    /**
+     * Show information with Notification
+     * @param project Project
+     * @param content The content will show
+     */
+    private fun showNotification(project: Project, content: String) {
+        NotificationGroupManager.getInstance().getNotificationGroup("Custom Notification Group")
+            .createNotification(content, NotificationType.ERROR)
+            .notify(project)
     }
 
 
