@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'com.gredicer'
-version '1.3.0'
+version '1.5.0'
 
 repositories {
     mavenCentral()
@@ -19,7 +19,8 @@ dependencies {
 }
 
 intellij {
-    version = '2021.1.1'
+//    version = '2021.1.1'
+    version = '2020.3.1'
     plugins = ['android', 'java']
 }
 
@@ -30,6 +31,8 @@ runIde {
 
 patchPluginXml {
     changeNotes = """
+      <em>1.5.0<em><br>
+      The official version<br>
       <em>1.3.0<em><br>
       Auto find adb path<br>
       <em>1.2.4<em><br>
