@@ -1,13 +1,15 @@
 <p align="center"><img src="img/animation_200.gif"/>
+
 <h4 align="center"><strong>FindActivity</strong></h4>
+
 <p align="center">Quickly jump to the corresponding Activity and Fragment of the current page</p>
 <p align="center">快速跳转到当前页面对应的 Activity 和 Fragment</p>
 <p align="center">
 <img src="https://img.shields.io/badge/language-kotlin-orange.svg"/>
 <img src="https://img.shields.io/badge/license-Apache-blue"/>
 </p>
-
 <p align="center"><img src="img/screenshot.gif"/>
+<br/><br/>
 
 <p align="center"><strong>HOW TO GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如何获取&nbsp;&nbsp;&nbsp;&nbsp;</strong></p>
 
@@ -22,7 +24,7 @@
 <br/><br/>
 ① 连接手机并打开在手机上打开项目对应的app<br>
 ② 点击菜单栏 -> 工具 -> FindActivity 或者通过快捷键 "Alt + 0"
-
+<br/><br/>
 
 
 
