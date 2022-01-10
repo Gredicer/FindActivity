@@ -9,3 +9,5 @@
 <img src="https://img.shields.io/badge/language-kotlin-orange.svg"/>
 <img src="https://img.shields.io/badge/license-Apache-blue"/>
 </p>
+
+<p align="center"><img src="img/screenshot.gif"/>
