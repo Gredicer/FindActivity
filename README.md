@@ -11,12 +11,12 @@
 
 <br/><br/>
 
-<p align="center"><strong>HOW TO GET&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如何获取&nbsp;&nbsp;&nbsp;&nbsp;</strong></p>
+<p align="center"><strong>HOW TO GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如何获取&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></p>
 <p align="center"><img src="img/screenshot1.png"/>
 
 
 <br/><br/><br/>
-<p align="center"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;USAGE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;使用方法</strong></p>
+<p align="center"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;USAGE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;使用方法</strong></p>
 ① Connect the mobile phone and open the corresponding app of the project on the mobile phone<br>
 ② Choose Menu -> Tools -> FindActivity to use or just use keyboard shortcut "Alt + 0"
 <br/><br/>
