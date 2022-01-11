@@ -11,7 +11,7 @@
 
 <br/><br/>
 
-<p align="center"><strong>HOW TO GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如何获取&nbsp;&nbsp;&nbsp;&nbsp;</strong></p>
+<p align="center"><strong>HOW TO GET&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如何获取&nbsp;&nbsp;&nbsp;&nbsp;</strong></p>
 <p align="center"><img src="img/screenshot1.png"/>
 
 
