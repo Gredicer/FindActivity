@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'com.gredicer'
-version '1.5.0'
+version '1.5.0-21.3'
 
 repositories {
     mavenCentral()
@@ -19,15 +19,16 @@ dependencies {
 }
 
 intellij {
-    version = '2021.1.1'
-//    version = '2020.3.1'
+    version = '2021.3'
+//    version = '2021.1'
+//    version = '2020.3'
     plugins = ['android', 'java']
 }
 
-runIde {
-    autoReloadPlugins = true
-    ideDir = file('/Applications/Android Studio Preview.app/Contents')
-}
+//runIde {
+//    autoReloadPlugins = true
+//    ideDir = file('/Applications/Android Studio Preview.app/Contents')
+//}
 
 patchPluginXml {
     changeNotes = """
