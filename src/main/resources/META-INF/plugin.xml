@@ -1,6 +1,6 @@
 <idea-plugin require-restart="false">
-    <id>com.gredicer.FindActivity</id>
     <name>FindActivity</name>
+    <id>com.gredicer.FindActivity</id>
     <vendor email="gredicer@qq.com" url="">Gredicer</vendor>
     <description><![CDATA[
     An AndroidStudio plugin that can quickly get the activity and fragment displayed in the current app and jump when adb is active.<br>
@@ -13,6 +13,7 @@
     ② 点击菜单栏 -> 工具 -> FindActivity 或者通过快捷键 "Alt + 0"<br>
     <br>
     ]]></description>
+    <idea-version since-build="201"/>
 
     <depends>com.intellij.modules.platform</depends>
     <depends config-file="depends.xml" optional="true">com.intellij.java</depends>

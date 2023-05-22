@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'com.gredicer'
-version '1.5.0-21.3'
+version '1.5.1-22.2'
 
 repositories {
     mavenCentral()
@@ -19,7 +19,8 @@ dependencies {
 }
 
 intellij {
-    version = '2021.3'
+    version = '2022.2'
+//    version = '2021.3'
 //    version = '2021.1'
 //    version = '2020.3'
     plugins = ['android', 'java']
@@ -32,6 +33,8 @@ intellij {
 
 patchPluginXml {
     changeNotes = """
+      <em>1.5.1<em><br>
+      Update the ide adaptation version<br>
       <em>1.5.0<em><br>
       The official version<br>
       <em>1.3.0<em><br>
