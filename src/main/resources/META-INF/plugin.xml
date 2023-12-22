@@ -13,7 +13,7 @@
     ② 点击菜单栏 -> 工具 -> FindActivity 或者通过快捷键 "Alt + 0"<br>
     <br>
     ]]></description>
-    <idea-version since-build="201"/>
+    <idea-version since-build="2023.1"/>
 
     <depends>com.intellij.modules.platform</depends>
     <depends config-file="depends.xml" optional="true">com.intellij.java</depends>
