@@ -1,11 +1,11 @@
 plugins {
     id 'java'
     id 'org.jetbrains.intellij' version '1.1.4'
-    id 'org.jetbrains.kotlin.jvm' version '1.6.0'
+    id 'org.jetbrains.kotlin.jvm' version '1.8.0'
 }
 
 group 'com.gredicer'
-version '1.5.1-22.2'
+version '1.5.1-unofficial-2023.1'
 
 repositories {
     mavenCentral()
@@ -13,16 +13,13 @@ repositories {
 
 
 dependencies {
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.6.0'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.8.0'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
 }
 
 intellij {
-    version = '2022.2'
-//    version = '2021.3'
-//    version = '2021.1'
-//    version = '2020.3'
+    version = '2023.1'
     plugins = ['android', 'java']
 }
 
